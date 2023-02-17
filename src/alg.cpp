@@ -54,7 +54,7 @@ uint64_t sumPrime(uint64_t hbound) {
     uint64_t sum = 2;
     if (hbound < 3) return 0;
     if (hbound == 3) return 2;
-    for(uint64_t number = 3; number < hbound; number += 2) {
+    for (uint64_t number = 3; number < hbound; number += 2) {
         flag = 0;
         for (int i = 2; i < number; i++)
             if (number % i == 0) {
