@@ -12,7 +12,7 @@ bool checkPrime(uint64_t value) {
             break;
         }
     if (flag == 0) return true;
-    else 
+    else
         return false;
 }
 
@@ -50,10 +50,11 @@ uint64_t nextPrime(uint64_t value) {
 
 uint64_t sumPrime(uint64_t hbound) {
 // вставьте код функции
-    int flag, sum = 0, number = 1;
-    if (hbound < 2) return 0;
-    while (number != (hbound - 1)) {
-        number++;
+    int flag;
+    uint64_t sum = 2;
+    if (hbound < 3) return 0;
+    if (hbound == 3) return 2;
+    for(uint64_t number = 3; number < hbound; number += 2) {
         flag = 0;
         for (int i = 2; i < number; i++)
             if (number % i == 0) {
